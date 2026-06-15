@@ -44,7 +44,8 @@ GIF created with ...  GIF tool here
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+One of the biggest challenges was transitioning from a static JavaScript array to a PostgreSQL database. Initially, the app relied on local data (`game.js`), but it was refactored to use SQL queries and async Express routes. Another challenge was making the search feature return styled HTML cards instead of JSON output, which required restructuring the homepage route to handle query parameters.
+
 
 ## License
 
