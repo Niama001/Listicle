@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cozy Video Games</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    article {
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.15s ease-in-out;
+    }
+
+    article:hover {
+      transform: translateY(-5px);
+    }
+
+    h1 { text-align: center; }
+
+    /* SEARCH BAR STYLE */
+    .search-form {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .search-form input {
+      padding: 0.6rem;
+      width: 320px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .search-form button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 140px;   /* makes button smaller */
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <h1>🎮 Cozy Video Games</h1>
+    <p style="text-align:center;">Relaxing games to unwind after long day</p>
+
+    <!-- SEARCH BAR -->
+    <form method="GET" action="/" class="search-form">
+      <input 
+        type="text" 
+        name="genre" 
+        placeholder="Search games (farming, life, pc...)"
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="grid">
+      {{GAMES}}
+    </div>
+
+  </main>
+</body>
+</html>

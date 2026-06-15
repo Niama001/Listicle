@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{TITLE}}</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+  <style>
+    .tag {
+      display: inline-block;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      color: white;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .farming { background: green; }
+    .life { background: blue; }
+    .default { background: gray; }
+
+    .game-image {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      max-height: 400px;
+    }
+
+    .container {
+      max-width: 800px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <img src="{{IMAGE}}" class="game-image" alt="{{TITLE}}" />
+
+    <h1>{{TITLE}}</h1>
+
+    <span class="tag {{GENRE_CLASS}}">{{GENRE}}</span>
+    <span class="tag default">{{PLATFORM}}</span>
+
+    <hr />
+
+    <h3>Description</h3>
+    <p>{{DESCRIPTION}}</p>
+
+    <a href="/" class="back-link">← Back to all games</a>
+
+  </main>
+</body>
+</html>

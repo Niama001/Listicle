@@ -1,0 +1,50 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Initialize Git Repo",
+			"type": "shell",
+			"command": "git init && git remote add origin https://github.com/Niama001/CozyGames.git && git remote -v",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Initialize Git Repo",
+			"type": "shell",
+			"command": "if (!(Test-Path .git)) { git init }; git remote remove origin 2>$null; git remote add origin https://github.com/Niama001/CozyGames.git; git remote -v",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Initialize Git Repo 2",
+			"type": "shell",
+			"command": "if (!(Test-Path .git)) { git init }; git remote remove origin 2>$null; git remote add origin https://github.com/Niama001/CozyGames.git; git remote -v",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Verify Git Repo",
+			"type": "shell",
+			"command": "git status --short --branch",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Push to GitHub",
+			"type": "shell",
+			"command": "git push -u origin main",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
